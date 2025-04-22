@@ -9,9 +9,9 @@
 */
 
 const careerData = {
-    web: { title: "Web Developer", salary: "$60,480 - $120,000" },
-    data: { title: "Data Analyst", salary: "$71,034 - $107,500" },
-    design: { title: "UI/UX Designer", salary: "$92,482 - $148,500" }
+    web: { title: "Web Developer", salary: "$26,500 (Junior) - $120,000 (Senior)" },
+    data: { title: "Data Analyst", salary: "$51,000 (Junior) - $107,500 (Senior)" },
+    design: { title: "UI/UX Designer", salary: "$38,500 (Junior) - $148,500 (Senior)" }
 };
 
 const questions = [
