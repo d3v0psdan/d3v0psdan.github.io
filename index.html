@@ -1,60 +1,79 @@
+<!--
+    This is the Debugging Ducks Career Quiz website.
+
+    Author: The Debugging Ducks
+
+    Date: 2025-04-22
+
+    Description: This HTML file serves as the main structure for the Debugging Ducks Career Quiz.
+        It includes metadata, links to stylesheets, and a script for handling the quiz functionality.
+        The quiz consists of a series of questions that help users determine their ideal career path.
+
+    Filename: index.html
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- (Metadata) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DMIT Career Quiz - Debugging Ducks</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Debugging Ducks Career Quiz">
+    <meta name="keywords" content="Debugging Ducks, Career Quiz, Fun Quiz, Personality Test">
+    <meta name="author" content="Debugging Ducks Team">
+    <meta name="theme-color" content="#10B981"> 
+    
+    <title>Debugging Ducks Career Quiz</title>
+
+    <!-- (Font) Google Preconnect -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- (Icon) -->
+    <link rel="icon" href="debugging-ducks-logo-transparent.png" type="image/png">
+
+    <!-- (Stylsheet) -->
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
     <div class="quiz-container">
-        <div class="progress-bar"></div>
-        <div class="question-container active" data-question="1">
-            <div class="question-header">
-                <h1>🦆 DMIT Career Quiz</h1>
-                <p>Find your perfect tech pathway!</p>
-            </div>
-            <div class="question">
-                <h2>When approaching a problem, you...</h2>
-                <div class="options">
-                    <label class="option">
-                        <input type="radio" name="q1" value="data">
-                        <span class="custom-radio"></span>
-                        <span class="option-text">Look for patterns in information</span>
-                    </label>
-                    <label class="option">
-                        <input type="radio" name="q1" value="design">
-                        <span class="custom-radio"></span>
-                        <span class="option-text">Sketch out possible solutions</span>
-                    </label>
-                    <label class="option">
-                        <input type="radio" name="q1" value="web">
-                        <span class="custom-radio"></span>
-                        <span class="option-text">Build a step-by-step solution</span>
-                    </label>
-                </div>
-            </div>
+        <div class="header">
+            <img src="debugging-ducks-logo-transparent.png" 
+                alt="Debugging Ducks Logo" 
+                class="logo">
+            <h1>Debugging Ducks Career Quiz</h1>
         </div>
 
-        <div class="result-container">
-            <div class="result-card">
-                <h2 class="result-title"></h2>
-                <p class="result-description"></p>
-                <div class="result-details">
-                    <div class="detail">
-                        <h3>🛠️ Key Skills</h3>
-                        <ul class="skills-list"></ul>
-                    </div>
-                    <div class="detail">
-                        <h3>💼 Career Paths</h3>
-                        <ul class="careers-list"></ul>
-                    </div>
-                </div>
-                <button class="retake-btn">Retake Quiz</button>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="questions-container">
+                <!-- Career questions injected by script -->
+            </div>
+            
+            <div class="result-container">
+                <h2 class="result-title">Quack-tastic Result!</h2>
+                <p>
+                    Your ideal career is a
+                    <br>
+                    <span id="career-name" style="font-size: 1.5rem; font-weight: bold;">
+                        <!-- Career name injected by script -->
+                    </span>
+                    <br>
+                    earning 
+                    <span id="career-salary" style="color: #10B981;">
+                        <!-- Career salary injected by script -->
+                    </span>
+                    /yr
+                </p>
+                <button class="retake-btn">Try Again 🦆</button>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Javascript handler for the quiz -->
+    <script src="quiz.js"></script>
 </body>
 </html>

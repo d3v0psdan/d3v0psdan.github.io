@@ -1,0 +1,204 @@
+/*
+    This is the Debugging Ducks Career Quiz website.
+
+    Author: The Debugging Ducks
+
+    Date: 2025-04-22
+
+    Filename: index.css
+*/
+
+:root {
+    --yellow: #FFD700;
+    --light-yellow: #FFF9C4;
+    --accent: #2A2A2A;
+    --white: #FFFFFF;
+    --border: 2px solid var(--yellow);
+}
+
+body {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--white);
+    color: var(--accent);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container {
+    width: 90%;
+    max-width: 800px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    position: relative;
+    border: var(--border);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    width: 140px;
+    height: 160px;
+    margin-right: 20px;
+    animation: glow 2s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 5px var(--yellow));
+    border: var(--border);
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border: var(--border);
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.questions-container, .result-container {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.result-container {
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.result-container.active {
+    transform: translateX(0);
+}
+
+.question {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+.question.active {
+    transform: translateX(0);
+}
+
+.question.exit {
+    transform: translateX(-100%);
+}
+
+h1, h2 {
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    border-bottom: var(--border);
+    padding-bottom: 10px;
+}
+
+.options {
+    display: grid;
+    gap: 1rem;
+}
+
+.option {
+    padding: 1.5rem;
+    background: var(--white);
+    border: var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.option:hover {
+    background: var(--light-yellow);
+    box-shadow: 0 5px 15px rgba(255,215,0,0.2);
+    transform: translateY(-2px);
+}
+
+.progress-container {
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    margin: 2rem 0;
+    border: var(--border);
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--yellow);
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.result-logo {
+    width: 179px;
+    height: 215px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    animation: glow 2s ease-in-out infinite alternate;
+    border: var(--border);
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.result-title {
+    color: var(--yellow);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.retake-btn {
+    background: var(--yellow);
+    color: var(--accent);
+    border: var(--border);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.retake-btn:hover {
+    background: var(--light-yellow);
+    transform: scale(1.05);
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px var(--yellow));
+    }
+    to {
+        filter: drop-shadow(0 0 20px var(--yellow));
+    }
+}
+
+p, span {
+    line-height: 1.6;
+}
