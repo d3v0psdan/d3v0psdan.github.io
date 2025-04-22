@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMIT Career Quiz - Debugging Ducks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="progress-bar"></div>
+        <div class="question-container active" data-question="1">
+            <div class="question-header">
+                <h1>🦆 DMIT Career Quiz</h1>
+                <p>Find your perfect tech pathway!</p>
+            </div>
+            <div class="question">
+                <h2>When approaching a problem, you...</h2>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q1" value="data">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Look for patterns in information</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="design">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Sketch out possible solutions</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="web">
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Build a step-by-step solution</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-card">
+                <h2 class="result-title"></h2>
+                <p class="result-description"></p>
+                <div class="result-details">
+                    <div class="detail">
+                        <h3>🛠️ Key Skills</h3>
+                        <ul class="skills-list"></ul>
+                    </div>
+                    <div class="detail">
+                        <h3>💼 Career Paths</h3>
+                        <ul class="careers-list"></ul>
+                    </div>
+                </div>
+                <button class="retake-btn">Retake Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
